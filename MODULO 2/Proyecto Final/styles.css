@@ -15,6 +15,7 @@ color:#333;
 /* TITULO */
 .titulo-principal{
 font-family:'Playfair Display', serif;
+font-size:2rem;
 }
 
 /* NAV */
@@ -24,24 +25,20 @@ justify-content:space-between;
 align-items:center;
 
 padding:1rem 5%;
-
 background:#222;
 color:white;
-
-position:sticky;
-top:0;
-z-index:1000;
 }
 
 .menu-links{
 display:flex;
-gap:20px;
+gap:1rem;
 list-style:none;
 }
 
 .menu-links a{
 color:white;
 text-decoration:none;
+font-size:0.9rem;
 }
 
 /* SECCIONES */
@@ -56,26 +53,28 @@ background:#f4f4f4;
 
 /* IMAGEN PRINCIPAL */
 .contenedor-img{
+width:100%;
 max-width:800px;
 margin:20px auto;
 }
 
 .contenedor-img img{
 width:100%;
+height:auto;
 border-radius:15px;
 }
 
-/* CARDS */
+/* FLEXBOX CARDS */
 .contenedor-cards{
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
-gap:20px;
+gap:1rem;
 }
 
 .card{
-flex:1 1 300px;
-max-width:350px;
+flex:1 1 250px;
+max-width:300px;
 
 background:white;
 padding:1rem;
@@ -83,12 +82,11 @@ padding:1rem;
 border-radius:15px;
 
 box-shadow:0 4px 10px rgba(0,0,0,0.1);
-
-position:relative;
 }
 
 .card img{
 width:100%;
+height:auto;
 border-radius:10px;
 }
 
@@ -96,32 +94,19 @@ border-radius:10px;
 .btn{
 display:inline-block;
 margin-top:10px;
-padding:10px 15px;
+padding:0.5rem 1rem;
 
 background:orange;
 color:white;
 
 text-decoration:none;
 border-radius:8px;
-}
-
-/* ETIQUETA */
-.etiqueta{
-position:absolute;
-top:10px;
-left:10px;
-
-background:red;
-color:white;
-
-padding:5px 10px;
-
-border-radius:5px;
-font-size:0.8rem;
+font-size:0.9rem;
 }
 
 /* MAPA */
 .mapa{
+width:100%;
 max-width:800px;
 margin:20px auto;
 border-radius:15px;
@@ -130,43 +115,43 @@ overflow:hidden;
 
 .mapa iframe{
 width:100%;
-height:350px;
-border:none;
-}
-
-/* BOTON FLOTANTE */
-.btn-flotante{
-position:fixed;
-bottom:20px;
-right:20px;
-
-background:green;
-color:white;
-
-padding:15px;
-
-border-radius:50%;
-text-decoration:none;
+height:300px;
 }
 
 /* FOOTER */
 .footer{
 text-align:center;
-padding:20px;
+padding:1rem;
 background:#222;
 color:white;
+font-size:0.9rem;
 }
 
-/* RESPONSIVO */
-@media (max-width:768px){
+/* RESPONSIVO FUERTE */
+@media (max-width:600px){
 
 .menu{
 flex-direction:column;
+align-items:center;
 }
 
-.contenedor-cards{
+.menu-links{
 flex-direction:column;
-align-items:center;
+gap:0.5rem;
+margin-top:10px;
+}
+
+.titulo-principal{
+font-size:1.5rem;
+}
+
+.card{
+flex:1 1 100%;
+max-width:90%;
+}
+
+.mapa iframe{
+height:200px;
 }
 
 }
