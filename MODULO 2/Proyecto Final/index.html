@@ -13,18 +13,29 @@
 
 <body>
 
-<nav class="menu">
+<!-- NAVBAR -->
+<nav class="navbar">
+
 <div class="logo">Sabor Industrial</div>
 
-<ul class="menu-links">
-<li><a href="index.html">Inicio</a></li>
-<li><a href="menu.html">Menú</a></li>
-<li><a href="favoritos.html">Favoritos</a></li>
-<li><a href="#nosotros">Nosotros</a></li>
-<li><a href="#ubicacion">Ubicación</a></li>
-</ul>
+<!-- BOTON HAMBURGUESA -->
+<input type="checkbox" id="menu-toggle">
+
+<label for="menu-toggle" class="menu-icon">
+☰
+</label>
+
+<div class="nav-links">
+<a href="index.html">Inicio</a>
+<a href="menu.html">Menú</a>
+<a href="favoritos.html">Favoritos</a>
+<a href="#nosotros">Nosotros</a>
+<a href="#ubicacion">Ubicación</a>
+</div>
+
 </nav>
 
+<!-- HERO -->
 <section class="seccion">
 <h1 class="titulo-principal">Bienvenido a Sabor Industrial</h1>
 <p>Los mejores platillos con estilo moderno</p>
@@ -34,6 +45,7 @@
 </div>
 </section>
 
+<!-- MENU -->
 <section class="seccion fondo">
 <h2>Menú</h2>
 
@@ -55,12 +67,8 @@
 </div>
 </section>
 
-<section id="nosotros" class="seccion">
-<h2>Nosotros</h2>
-<p>Restaurante moderno con comida de calidad.</p>
-</section>
-
-<section id="ubicacion" class="seccion fondo">
+<!-- UBICACION -->
+<section class="seccion fondo">
 <h2>Ubicación</h2>
 
 <div class="mapa">
@@ -68,6 +76,7 @@
 </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="footer">
 <p>© 2026 Sabor Industrial</p>
 <p>Síguenos en nuestras redes sociales</p>
@@ -79,6 +88,23 @@
 
 <p>Atención especializada: (+52) 951 458 78 95</p>
 </footer>
+
+<!-- MODAL COOKIES -->
+<input type="checkbox" id="cookies-toggle">
+
+<div class="cookie-modal">
+
+<div class="cookie-box">
+
+<p>Este sitio utiliza cookies para mejorar tu experiencia.</p>
+
+<label for="cookies-toggle" class="btn-cookie">
+Aceptar
+</label>
+
+</div>
+
+</div>
 
 </body>
 </html>
