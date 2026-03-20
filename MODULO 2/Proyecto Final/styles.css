@@ -1,14 +1,13 @@
-/* RESET GENERAL */
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 }
 
-/* HERENCIA GLOBAL (NO repetir en cada elemento) */
+/* HERENCIA: define estilo global */
 body{
 font-family:Arial, sans-serif;
-font-size:1rem; /* 🔥 puedes cambiar tamaño base aquí */
+font-size:1rem; /* cambia tamaño base aquí */
 line-height:1.5;
 color:#333;
 }
@@ -16,7 +15,7 @@ color:#333;
 /* TITULO PRINCIPAL */
 .titulo-principal{
 font-family:'Playfair Display', serif;
-font-size:clamp(1.5rem, 4vw, 2.5rem); /* 🔥 se adapta automáticamente */
+font-size:clamp(1.5rem, 4vw, 2.5rem); /* se adapta a pantalla */
 }
 
 /* NAVBAR */
@@ -24,21 +23,20 @@ font-size:clamp(1.5rem, 4vw, 2.5rem); /* 🔥 se adapta automáticamente */
 display:flex;
 justify-content:space-between;
 align-items:center;
+flex-wrap:wrap; /* evita que se rompa */
 
 padding:1rem 5%;
 background:#222;
 color:white;
 }
 
+/* LINKS DEL MENU */
 .menu-links{
 display:flex;
 gap:1rem;
+flex-wrap:wrap;
+justify-content:center;
 list-style:none;
-}
-
-.menu-links a{
-color:white;
-text-decoration:none;
 }
 
 /* ICONO CASA */
@@ -51,15 +49,24 @@ text-decoration:none;
 }
 
 .home-icon:hover{
-background:#444; /* 🔥 hover oscuro */
+background:#444;
 }
 
-/* SECCIONES */
+/* SECCIONES CENTRADAS */
 .seccion{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+
 padding:5%;
 text-align:center;
+
+max-width:1200px;
+margin:0 auto;
 }
 
+/* FONDO GRIS */
 .fondo{
 background:#f4f4f4;
 }
@@ -79,48 +86,51 @@ border-radius:15px;
 /* CONTENEDOR FLEX */
 .contenedor-cards{
 display:flex;
-flex-wrap:wrap; /*  clave para responsivo */
+flex-wrap:wrap;
 justify-content:center;
 gap:1rem;
 }
 
 /* TARJETAS */
 .card{
-flex:1 1 250px; /*  mínimo tamaño */
+flex:1 1 250px;
 max-width:320px;
 min-width:220px;
 
 display:flex;
 flex-direction:column;
+align-items:center;
+justify-content:space-between;
+
+position:relative; /* necesario para etiqueta */
 
 background:white;
 padding:1rem;
 border-radius:15px;
-
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* IMÁGENES */
+/* IMAGEN DE TARJETA */
 .card img{
 width:100%;
-height:180px; /*  cambia altura aquí */
+height:180px; /* puedes cambiar tamaño aquí */
+min-height:150px;
 object-fit:cover;
 border-radius:10px;
 }
 
-/* TEXTO */
+/* TEXTO CONTROLADO */
 h1,h2,h3,p{
-word-wrap:break-word;
+max-width:600px;
+width:100%;
+word-break:break-word;
 }
 
-/* BOTÓN */
+/* BOTON */
 .btn{
 margin-top:10px;
 padding:0.5rem;
-
 background:orange;
 color:white;
-
 text-decoration:none;
 border-radius:8px;
 }
@@ -135,7 +145,6 @@ background:red;
 color:white;
 
 padding:5px 10px;
-
 border-radius:5px;
 font-size:0.8rem;
 }
@@ -165,6 +174,7 @@ background:#222;
 color:white;
 }
 
+/* REDES */
 .redes{
 display:flex;
 gap:15px;
@@ -180,23 +190,15 @@ color:orange;
 }
 
 /* RESPONSIVO */
-@media (max-width:600px){
-
-.menu{
-flex-direction:column;
-}
-
-.menu-links{
-flex-direction:column;
-}
+@media (max-width:400px){
 
 .card{
-flex:1 1 100%;
-max-width:90%;
+min-width:100%;
+max-width:100%;
 }
 
 .card img{
-height:150px; /*  reduce tamaño en celular */
+height:150px;
 }
 
 .mapa iframe{
