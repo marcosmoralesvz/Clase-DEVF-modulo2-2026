@@ -1,24 +1,25 @@
+/* RESET GENERAL */
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 }
 
-/* HERENCIA */
+/* HERENCIA GLOBAL (NO repetir en cada elemento) */
 body{
 font-family:Arial, sans-serif;
-font-size:1rem;
+font-size:1rem; /* 🔥 puedes cambiar tamaño base aquí */
 line-height:1.5;
 color:#333;
 }
 
-/* TITULO */
+/* TITULO PRINCIPAL */
 .titulo-principal{
 font-family:'Playfair Display', serif;
-font-size:2rem;
+font-size:clamp(1.5rem, 4vw, 2.5rem); /* 🔥 se adapta automáticamente */
 }
 
-/* NAV */
+/* NAVBAR */
 .menu{
 display:flex;
 justify-content:space-between;
@@ -38,7 +39,19 @@ list-style:none;
 .menu-links a{
 color:white;
 text-decoration:none;
-font-size:0.9rem;
+}
+
+/* ICONO CASA */
+.home-icon{
+font-size:1.5rem;
+color:white;
+padding:5px 10px;
+border-radius:8px;
+text-decoration:none;
+}
+
+.home-icon:hover{
+background:#444; /* 🔥 hover oscuro */
 }
 
 /* SECCIONES */
@@ -53,7 +66,6 @@ background:#f4f4f4;
 
 /* IMAGEN PRINCIPAL */
 .contenedor-img{
-width:100%;
 max-width:800px;
 margin:20px auto;
 }
@@ -64,49 +76,72 @@ height:auto;
 border-radius:15px;
 }
 
-/* FLEXBOX CARDS */
+/* CONTENEDOR FLEX */
 .contenedor-cards{
 display:flex;
-flex-wrap:wrap;
+flex-wrap:wrap; /*  clave para responsivo */
 justify-content:center;
 gap:1rem;
 }
 
+/* TARJETAS */
 .card{
-flex:1 1 250px;
-max-width:300px;
+flex:1 1 250px; /*  mínimo tamaño */
+max-width:320px;
+min-width:220px;
+
+display:flex;
+flex-direction:column;
 
 background:white;
 padding:1rem;
-
 border-radius:15px;
 
 box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 
+/* IMÁGENES */
 .card img{
 width:100%;
-height:auto;
+height:180px; /*  cambia altura aquí */
+object-fit:cover;
 border-radius:10px;
 }
 
-/* BOTON */
+/* TEXTO */
+h1,h2,h3,p{
+word-wrap:break-word;
+}
+
+/* BOTÓN */
 .btn{
-display:inline-block;
 margin-top:10px;
-padding:0.5rem 1rem;
+padding:0.5rem;
 
 background:orange;
 color:white;
 
 text-decoration:none;
 border-radius:8px;
-font-size:0.9rem;
+}
+
+/* ETIQUETA */
+.etiqueta{
+position:absolute;
+top:10px;
+left:10px;
+
+background:red;
+color:white;
+
+padding:5px 10px;
+
+border-radius:5px;
+font-size:0.8rem;
 }
 
 /* MAPA */
 .mapa{
-width:100%;
 max-width:800px;
 margin:20px auto;
 border-radius:15px;
@@ -120,34 +155,48 @@ height:300px;
 
 /* FOOTER */
 .footer{
-text-align:center;
-padding:1rem;
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:10px;
+
+padding:1.5rem;
 background:#222;
 color:white;
-font-size:0.9rem;
 }
 
-/* RESPONSIVO FUERTE */
+.redes{
+display:flex;
+gap:15px;
+}
+
+.redes a{
+color:white;
+text-decoration:none;
+}
+
+.redes a:hover{
+color:orange;
+}
+
+/* RESPONSIVO */
 @media (max-width:600px){
 
 .menu{
 flex-direction:column;
-align-items:center;
 }
 
 .menu-links{
 flex-direction:column;
-gap:0.5rem;
-margin-top:10px;
-}
-
-.titulo-principal{
-font-size:1.5rem;
 }
 
 .card{
 flex:1 1 100%;
 max-width:90%;
+}
+
+.card img{
+height:150px; /*  reduce tamaño en celular */
 }
 
 .mapa iframe{
