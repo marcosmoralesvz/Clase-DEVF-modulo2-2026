@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +11,9 @@
 
 <nav class="navbar">
 <div>Sabor Industrial</div>
+
+<input type="checkbox" id="menu-toggle">
+<label for="menu-toggle" class="menu-icon">☰</label>
 
 <div class="nav-links">
 <a href="index.html">Inicio</a>
@@ -35,28 +38,78 @@
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400">
+<div class="card-contenido">
 <h3>Pizza Gourmet</h3>
-<div class="estrellas">★ ★ ★ ★ ★</div>
-<a href="menu.html" class="btn">Ver más</a>
+<p>Pizza artesanal con ingredientes frescos y sabor único.</p>
+<div class="estrellas">★★★★★</div>
+<a href="menu.html" class="btn">Ordenar</a>
+</div>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400">
+<div class="card-contenido">
 <h3>Ensalada Especial</h3>
-<div class="estrellas">★ ★ ★ ★ ☆</div>
-<a href="menu.html" class="btn">Ver más</a>
+<p>Mezcla fresca y saludable con aderezo especial.</p>
+<div class="estrellas">★★★★★</div>
+<a href="menu.html" class="btn">Ordenar</a>
+</div>
 </div>
 
 </div>
 </section>
 
+<section class="seccion">
+<h2>Platillos Favoritos</h2>
+
+<div class="contenedor-cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=400">
+<div class="card-contenido">
+<h3>Hamburguesa Premium</h3>
+<p>Carne jugosa con ingredientes seleccionados.</p>
+<div class="estrellas">★★★★★</div>
+<a href="favoritos.html" class="btn">Ver más</a>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="seccion">
+<h2>Sobre Nosotros</h2>
+<p>
+En Sabor Industrial combinamos calidad, sabor y diseño moderno para ofrecer la mejor experiencia gastronómica.
+</p>
+</section>
+
+<section class="seccion">
+<h2>Ubicación</h2>
+
+<iframe 
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1571.7192247830621!2d-97.77968155010451!3d17.807529150378215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c601fb7a31e37d%3A0xc360d8ebb973f0ed!2sRed%20Line!5e0!3m2!1ses-419!2smx!4v1773797889750!5m2!1ses-419!2smx"
+width="100%" 
+height="300" 
+style="border:0;" 
+allowfullscreen="" 
+loading="lazy">
+</iframe>
+
 </div>
 
 <footer class="footer">
-<p>© 2026 Sabor Industrial</p>
 <p>Síguenos en redes sociales</p>
+<p>Facebook | Instagram</p>
 <p>Atención: (+52) 951 458 78 95</p>
 </footer>
+
+<input type="checkbox" id="cookies">
+
+<div class="cookie-modal">
+<p>Usamos cookies para mejorar tu experiencia</p>
+<label for="cookies" class="btn">Aceptar</label>
+</div>
 
 </body>
 </html>
